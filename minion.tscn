@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bqmngbavqahnb"]
+
+[ext_resource type="Script" uid="uid://cjsh4rlrsu1iq" path="res://minion.gd" id="1_ifsmd"]
+[ext_resource type="Texture2D" uid="uid://bqurbctqu04ny" path="res://enemyBlack2.png" id="2_20mgi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_20mgi"]
+radius = 15.0
+
+[node name="minion" type="CharacterBody2D" unique_id=1895814648]
+script = ExtResource("1_ifsmd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1698432305]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_20mgi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=239182534]
+shape = SubResource("CircleShape2D_20mgi")

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://p52cutv27t4t"]
+
+[ext_resource type="Script" uid="uid://y1cc6o6dph1m" path="res://bala.gd" id="1_ag3k0"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jk513"]
+load_path = "res://.godot/imported/bala.png-307fa9043c2611f2c6a1a490a284e6aa.ctex"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hv006"]
+radius = 9.219544
+
+[node name="bala" type="Area2D" unique_id=1910265945]
+script = ExtResource("1_ag3k0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=114893883]
+rotation = -1.5707964
+scale = Vector2(0.04, 0.04)
+texture = SubResource("CompressedTexture2D_jk513")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1505534936]
+shape = SubResource("CircleShape2D_hv006")

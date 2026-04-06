@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://bs41kg0oexn15"]
+
+[ext_resource type="Script" uid="uid://5rfvxcv6y7ws" path="res://gameover.gd" id="1_4nh4k"]
+[ext_resource type="Texture2D" uid="uid://dqq12dl7bhvqf" path="res://generative-ai-galaxy-space-planets-stars-landscape-8bit-pixel-art-background-retrofuturistic-arcade-game-scene-with-starry-cosmos-sky-capturing-essence-cosmic-adventure-exploration_8071-54727.jpg" id="2_tpdqf"]
+
+[node name="game_over" type="Control" unique_id=1292778222]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 2.0
+offset_right = 1132.0
+offset_bottom = 625.0
+script = ExtResource("1_4nh4k")
+
+[node name="ColorRect" type="Sprite2D" parent="." unique_id=1553722687]
+modulate = Color(0.2792629, 0.18553478, 0.9598102, 1)
+position = Vector2(579, 321)
+scale = Vector2(1.8338659, 1.8409091)
+texture = ExtResource("2_tpdqf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=627486486]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.112
+anchor_top = 0.22100002
+anchor_right = 0.328
+anchor_bottom = 0.5
+offset_left = 0.4399948
+offset_top = -0.12501526
+offset_right = 0.35998535
+offset_bottom = -15.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="LabelTitulo" type="Label" parent="VBoxContainer" unique_id=1240642959]
+modulate = Color(2.12254, 1.2808903, 1.1711098, 1)
+self_modulate = Color(0.9308239, 0.024504304, 1.540184e-06, 1)
+layout_mode = 2
+text = "GAME OVER"
+vertical_alignment = 1
+max_lines_visible = 19
+visible_characters_behavior = 3
+
+[node name="LabelPuntuacion" type="Label" parent="VBoxContainer" unique_id=1184222165]
+self_modulate = Color(0.989942, 0.1820333, 0.12684315, 1)
+layout_mode = 2
+text = "Puntuación: 0"
+
+[node name="BtnReintentar" type="Button" parent="VBoxContainer" unique_id=1563238397]
+layout_mode = 2
+keep_pressed_outside = true
+text = "Reintentar"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="VBoxContainer/BtnReintentar" unique_id=1613021294]
+
+[node name="BtnSalir" type="Button" parent="VBoxContainer" unique_id=1866230094]
+layout_mode = 2
+keep_pressed_outside = true
+text = "Salir"
